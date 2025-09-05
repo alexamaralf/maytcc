@@ -34,9 +34,7 @@ function updateProgress() {
   progressDiv.textContent = `Perguntas respondidas: ${answered} / ${quizData.length}`;
 }
 
-quizContainer.addEventListener("change", () => {
-  updateProgress();
-});
+quizContainer.addEventListener("change", () => updateProgress());
 
 submitBtn.addEventListener("click", () => {
   let score = 0;
