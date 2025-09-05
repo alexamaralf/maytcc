@@ -141,31 +141,54 @@
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <header>
-    <div class="container">
-      <div class="topbar">
-        <div class="brand" aria-label="Educação Sexual Interativa">
-          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm0 3a7 7 0 1 1-7 7 7.008 7.008 0 0 1 7-7Z" fill="white" opacity=".8"/><path d="M12 7a5 5 0 1 0 5 5 5.006 5.006 0 0 0-5-5Z" fill="white"/></svg>
-          <div>
-            <h1>Educação Sexual Interativa</h1>
-            <p class="muted">Aprenda de forma divertida, segura e sem tabus.</p>
-            <nav class="nav" aria-label="Navegação principal" style="margin-top:1.2rem;">
-              <a href="#consentimento">Consentimento</a>
-              <a href="#adolescencia">Adolescência</a>
-              <a href="#contracepcao">Contracepção</a>
-              <a href="#ists">ISTs</a>
-              <a href="#relacionamentos">Relações</a>
-              <a href="#quiz">Quiz</a>
-              <button class="toggle" id="themeToggle" aria-pressed="false" aria-label="Alternar tema claro/escuro">🌙</button>
-            </nav>
-          </div>
-        </div>
+  <header style="background:linear-gradient(100deg,#4a90e2 60%,#50e3c2 100%);padding:3.2rem 0 2.2rem 0;border-bottom-left-radius:2.2rem;border-bottom-right-radius:2.2rem;box-shadow:0 6px 32px #4a90e233;">
+    <div class="container" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+      <div style="margin-bottom:1.2rem;">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" style="filter:drop-shadow(0 2px 12px #4a90e2aa);"><circle cx="12" cy="12" r="10" fill="#fff"/><circle cx="12" cy="12" r="6" fill="#4a90e2"/></svg>
       </div>
-  </div>
-
-      <div style="margin:2rem auto 1.2rem auto;text-align:center;">
-        <a href="contato.html" class="nav-link" target="_blank" rel="noopener" style="display:inline-block;padding:.4rem .75rem;border-radius:.6rem;background:rgba(255,255,255,.15);backdrop-filter:saturate(120%) blur(2px);color:#fff;text-decoration:none;font-weight:400;">❓ Dúvidas? Entre em contato conosco</a>
-      </div>
+  <h1 style="font-size:2.7rem;font-weight:900;letter-spacing:2px;margin:0 0 0.5rem 0;line-height:1.1;text-transform:uppercase;color:#fff;text-shadow:0 4px 24px #222a,0 1px 0 #357abd;">EDUCAÇÃO SEXUAL INTERATIVA</h1>
+  <p class="muted" style="font-size:1.22rem;font-weight:500;margin:0 0 1.7rem 0;letter-spacing:0.5px;color:#fff;text-shadow:0 2px 8px #222a,0 1px 0 #357abd;">Informação, respeito e saúde para todos.</p>
+      <nav class="nav" aria-label="Navegação principal" style="display:flex;flex-wrap:wrap;gap:1.1rem;justify-content:center;margin-bottom:1.2rem;">
+        <a href="#consentimento" class="nav-link topnav-btn">Consentimento</a>
+        <a href="#adolescencia" class="nav-link topnav-btn">Adolescência</a>
+        <a href="#contracepcao" class="nav-link topnav-btn">Contracepção</a>
+        <a href="#ists" class="nav-link topnav-btn">ISTs</a>
+        <a href="#relacionamentos" class="nav-link topnav-btn">Relações</a>
+        <a href="#quiz" class="nav-link topnav-btn" style="background:#fff;color:#4a90e2;font-weight:700;box-shadow:0 2px 12px #4a90e233;">QUIZ</a>
+   
+        <button class="toggle" id="themeToggle" aria-pressed="false" aria-label="Alternar tema claro/escuro" style="margin-left:0.5rem;"> Modo Escuro 🌙</button>
+      </nav>
+      <a href="contato.html" class="nav-link topnav-btn" target="_blank" rel="noopener" style="display:inline-block;padding:.7rem 1.5rem;border-radius:1.5rem;background:#fff;color:#4a90e2;font-weight:700;box-shadow:0 2px 12px #4a90e233;transition:background .2s, color .2s, transform .2s;margin-top:0.2rem;">❓ Dúvidas? Fale conosco</a>
+    </div>
+    <style>
+      .topnav-btn {
+        padding: .7rem 1.5rem;
+        border-radius: 1.5rem;
+        font-size: 1.08rem;
+        font-weight: 700;
+        background: rgba(255,255,255,0.13);
+        color: #fff;
+        box-shadow: 0 2px 12px #4a90e233;
+        border: none;
+        outline: none;
+        transition: background .18s, color .18s, transform .18s, box-shadow .18s;
+        text-decoration: none;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        margin-bottom: 0.2rem;
+      }
+      .topnav-btn:hover, .topnav-btn:focus {
+        background: #fff;
+        color: #4a90e2;
+        transform: translateY(-2px) scale(1.04);
+        box-shadow: 0 6px 24px #4a90e244;
+        text-decoration: none;
+      }
+      @media (max-width: 700px) {
+        header h1 { font-size: 1.5rem !important; }
+        .topnav-btn { font-size: 1rem; padding: .6rem 1.1rem; }
+      }
+    </style>
   </header>
 
   <main id="conteudo">
@@ -529,7 +552,7 @@
       root.classList.toggle('dark');
       const dark = root.classList.contains('dark');
       themeToggle.setAttribute('aria-pressed', String(dark));
-      themeToggle.textContent = dark ? '☀️' : '🌙';
+      themeToggle.textContent = dark ? 'Modo Claro ☀️' : 'Modo Escuro 🌙';
       localStorage.setItem('theme', dark?'dark':'light');
     });
 
