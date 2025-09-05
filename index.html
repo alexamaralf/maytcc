@@ -14,75 +14,160 @@
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
   <!-- CSS local -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="bg-primary text-white text-center py-4 mb-4">
-  <h1>Educação Sexual Interativa</h1>
+<header class="bg-primary text-white text-center py-4 shadow animate__animated animate__fadeInDown">
+  <h1><i class="fas fa-heartbeat"></i> Educação Sexual Interativa</h1>
   <p>Aprenda de forma divertida e segura</p>
 </header>
 
-<main class="container">
+<main class="container my-4">
+
   <!-- Quiz -->
-  <section id="quiz" class="card mb-4 p-4 animate__animated animate__fadeIn">
-    <h2 class="mb-3">Quiz Rápido</h2>
+  <section id="quiz" class="card p-4 mb-5 animate__animated animate__fadeIn">
+    <h2 class="mb-3"><i class="fas fa-question-circle"></i> Quiz Rápido</h2>
     <div id="quiz-container"></div>
     <div id="progress" class="my-2"></div>
     <div id="feedback" class="mb-2"></div>
-    <button id="submit-btn" class="btn btn-primary">Enviar</button>
+    <button id="submit-btn" class="btn btn-gradient mt-2">Enviar</button>
     <div id="result" class="mt-3 fw-bold"></div>
   </section>
 
   <!-- Conteúdo educativo -->
-  <section id="conteudo" class="card mb-4 p-4 animate__animated animate__fadeIn">
-    <h2 class="mb-3">O que você precisa saber</h2>
-    <ul>
-      <li><strong>Consentimento:</strong> Respeitar limites e ouvir o outro.</li>
-      <li><strong>Prevenção:</strong> Uso de camisinha e exames regulares contra ISTs.</li>
-      <li><strong>Contracepção:</strong> Diferentes métodos para evitar gravidez indesejada.</li>
-      <li><strong>Relacionamentos:</strong> Comunicação saudável e respeito mútuo.</li>
-      <li><strong>Segurança online:</strong> Cuidado ao compartilhar informações íntimas.</li>
-    </ul>
+  <section id="conteudo" class="mb-5 animate__animated animate__fadeIn">
+    <h2 class="mb-4 text-center"><i class="fas fa-book"></i> O que você precisa saber</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="https://images.unsplash.com/photo-1588776814546-8899e26e5034?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" class="card-img-top" alt="Consentimento">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-handshake"></i> Consentimento</h5>
+            <p class="card-text">Respeitar limites e ouvir o outro é essencial para relações saudáveis.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="https://images.unsplash.com/photo-1601315575565-7f18a3c8db2c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" class="card-img-top" alt="Prevenção">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-shield-alt"></i> Prevenção</h5>
+            <p class="card-text">Uso de camisinha e exames regulares protegem contra ISTs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm text-center">
+          <img src="https://images.unsplash.com/photo-1599058917210-1cb6e1f60d56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" class="card-img-top" alt="Contracepção">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-venus-mars"></i> Contracepção</h5>
+            <p class="card-text">Conheça diferentes métodos para evitar gravidez indesejada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Mitos x Fatos -->
-  <section id="mitos" class="card mb-4 p-4 animate__animated animate__fadeIn">
-    <h2 class="mb-3">Mitos x Fatos</h2>
-    <p><strong>Mito:</strong> “Pílula do dia seguinte é anticoncepcional regular.”<br>
-       <strong>Fato:</strong> Ela é de emergência e não substitui outros métodos.</p>
-    <p><strong>Mito:</strong> “Não dá para engravidar na primeira vez.”<br>
-       <strong>Fato:</strong> Dá sim, sempre que houver relação sem proteção.</p>
+  <section id="mitos" class="mb-5 animate__animated animate__fadeIn">
+    <h2 class="mb-4 text-center"><i class="fas fa-lightbulb"></i> Mitos x Fatos</h2>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+          <h5><i class="fas fa-times-circle text-danger"></i> Mito: Pílula do dia seguinte é anticoncepcional regular</h5>
+          <p><i class="fas fa-check-circle text-success"></i> Fato: É de emergência e não substitui outros métodos.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+          <h5><i class="fas fa-times-circle text-danger"></i> Mito: Não dá para engravidar na primeira vez</h5>
+          <p><i class="fas fa-check-circle text-success"></i> Fato: Dá sim, sempre que houver relação sem proteção.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+          <h5><i class="fas fa-times-circle text-danger"></i> Mito: DST só acontece com pessoas promíscuas</h5>
+          <p><i class="fas fa-check-circle text-success"></i> Fato: Qualquer pessoa sexualmente ativa pode contrair ISTs.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+          <h5><i class="fas fa-times-circle text-danger"></i> Mito: Método da tabelinha é 100% seguro</h5>
+          <p><i class="fas fa-check-circle text-success"></i> Fato: Não é confiável para prevenção de gravidez.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm p-3">
+          <h5><i class="fas fa-times-circle text-danger"></i> Mito: Pornografia ensina sexo seguro</h5>
+          <p><i class="fas fa-check-circle text-success"></i> Fato: Não reflete práticas seguras ou consentimento real.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="card mb-4 p-4 animate__animated animate__fadeIn">
-    <h2 class="mb-3">Perguntas Frequentes</h2>
-    <details class="mb-2"><summary>Posso engravidar na primeira vez?</summary>
-      <p>Sim, sempre que houver relação sem proteção, existe risco.</p>
-    </details>
-    <details class="mb-2"><summary>O que fazer em caso de violência?</summary>
-      <p>Ligue 180 ou procure ajuda médica imediata.</p>
-    </details>
+  <section id="faq" class="mb-5 animate__animated animate__fadeIn">
+    <h2 class="mb-4 text-center"><i class="fas fa-comments"></i> Perguntas Frequentes</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+            Posso engravidar na primeira vez?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Sim, sempre que houver relação sem proteção, existe risco.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            O que fazer em caso de violência?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Ligue 180 ou procure ajuda médica imediata.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+            Qual método contraceptivo é mais eficaz?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Camisinha combinada com pílula, DIU ou implante são opções eficazes, consulte um médico.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+            Com que frequência devo fazer exames de ISTs?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Pelo menos uma vez ao ano ou sempre que houver exposição de risco.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+            A camisinha masculina e feminina protegem igualmente?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Sim, quando usadas corretamente, ambas protegem contra ISTs e gravidez.</div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Ajuda -->
-  <section id="ajuda" class="card mb-4 p-4 animate__animated animate__fadeIn">
-    <h2 class="mb-3">Precisa de ajuda?</h2>
-    <p>📞 Emergência: <strong>190</strong></p>
-    <p>📞 SAMU: <strong>192</strong></p>
-    <p>📞 Violência contra mulher: <strong>180</strong></p>
-    <p>📞 Crianças e adolescentes: <strong>188</strong></p>
-  </section>
-</main>
-
-<footer class="text-center py-3 bg-light">
-  <p>© 2025 Educação Sexual Interativa</p>
-</footer>
-
-<!-- JS local -->
-<script src="script.js"></script>
-
-</body>
-</html>
+  <section id="ajuda" class="mb-5 animate__animated animate__fadeIn">
+    <h2 class="mb-3 text-center"><i class="fas fa-phone"></i> Precisa de ajuda?</h2>
+    <div class="row text
