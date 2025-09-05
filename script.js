@@ -5,8 +5,8 @@ const quizData = [
   { question: "O método da tabelinha é 100% seguro para prevenir gravidez?", options: ["Sim", "Não"], answer: "Não" },
   { question: "Camisinha feminina é uma opção de prevenção de ISTs?", options: ["Sim", "Não"], answer: "Sim" },
   { question: "DST e IST são a mesma coisa?", options: ["Sim", "Não"], answer: "Não" },
-  { question: "É possível engravidar mesmo usando preservativo de forma incorreta?", options: ["Sim", "Não"], answer: "Sim" },
-  { question: "É importante fazer exames periódicos mesmo sem sintomas de ISTs?", options: ["Sim", "Não"], answer: "Sim" },
+  { question: "É possível engravidar mesmo usando preservativo incorretamente?", options: ["Sim", "Não"], answer: "Sim" },
+  { question: "É importante fazer exames periódicos mesmo sem sintomas?", options: ["Sim", "Não"], answer: "Sim" },
   { question: "Pornografia é um bom guia para aprender sobre sexo seguro?", options: ["Sim", "Não"], answer: "Não" },
   { question: "Comunicação aberta com o parceiro(a) ajuda em relacionamentos saudáveis?", options: ["Sim", "Não"], answer: "Sim" }
 ];
@@ -21,7 +21,7 @@ function loadQuiz() {
   quizContainer.innerHTML = "";
   quizData.forEach((q, index) => {
     const div = document.createElement("div");
-    div.classList.add("question");
+    div.classList.add("question", "mb-3");
     div.innerHTML = `<p><strong>${index + 1}. ${q.question}</strong></p>
       ${q.options.map(opt => `<label><input type="radio" name="q${index}" value="${opt}"> ${opt}</label><br>`).join("")}`;
     quizContainer.appendChild(div);
