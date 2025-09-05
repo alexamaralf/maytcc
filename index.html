@@ -1,77 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Educação Sexual Interativa</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- CSS local -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Educação Sexual Interativa</h1>
-    <p>Aprenda de forma divertida e segura</p>
-  </header>
 
-  <main>
-    <!-- Quiz -->
-    <section id="quiz" class="card">
-      <h2>Quiz Rápido</h2>
-      <div id="quiz-container"></div>
-      <div id="progress"></div>
-      <div id="feedback"></div>
-      <button id="submit-btn">Enviar</button>
-      <div id="result"></div>
-    </section>
+<header class="bg-primary text-white text-center py-4 mb-4">
+  <h1>Educação Sexual Interativa</h1>
+  <p>Aprenda de forma divertida e segura</p>
+</header>
 
-    <!-- Conteúdo educativo -->
-    <section id="conteudo" class="card">
-      <h2>O que você precisa saber</h2>
-      <ul>
-        <li><strong>Consentimento:</strong> Respeitar limites e ouvir o outro.</li>
-        <li><strong>Prevenção:</strong> Uso de camisinha e exames regulares contra ISTs.</li>
-        <li><strong>Contracepção:</strong> Diferentes métodos para evitar gravidez indesejada.</li>
-        <li><strong>Relacionamentos:</strong> Comunicação saudável e respeito mútuo.</li>
-        <li><strong>Segurança online:</strong> Cuidado ao compartilhar informações íntimas.</li>
-      </ul>
-    </section>
+<main class="container">
+  <!-- Quiz -->
+  <section id="quiz" class="card mb-4 p-4 animate__animated animate__fadeIn">
+    <h2 class="mb-3">Quiz Rápido</h2>
+    <div id="quiz-container"></div>
+    <div id="progress" class="my-2"></div>
+    <div id="feedback" class="mb-2"></div>
+    <button id="submit-btn" class="btn btn-primary">Enviar</button>
+    <div id="result" class="mt-3 fw-bold"></div>
+  </section>
 
-    <!-- Mitos x Fatos -->
-    <section id="mitos" class="card">
-      <h2>Mitos x Fatos</h2>
-      <p><strong>Mito:</strong> “Pílula do dia seguinte é anticoncepcional regular.”<br>
-      <strong>Fato:</strong> Ela é de emergência e não substitui outros métodos.</p>
+  <!-- Conteúdo educativo -->
+  <section id="conteudo" class="card mb-4 p-4 animate__animated animate__fadeIn">
+    <h2 class="mb-3">O que você precisa saber</h2>
+    <ul>
+      <li><strong>Consentimento:</strong> Respeitar limites e ouvir o outro.</li>
+      <li><strong>Prevenção:</strong> Uso de camisinha e exames regulares contra ISTs.</li>
+      <li><strong>Contracepção:</strong> Diferentes métodos para evitar gravidez indesejada.</li>
+      <li><strong>Relacionamentos:</strong> Comunicação saudável e respeito mútuo.</li>
+      <li><strong>Segurança online:</strong> Cuidado ao compartilhar informações íntimas.</li>
+    </ul>
+  </section>
 
-      <p><strong>Mito:</strong> “Não dá para engravidar na primeira vez.”<br>
-      <strong>Fato:</strong> Dá sim, sempre que houver relação sem proteção.</p>
-    </section>
+  <!-- Mitos x Fatos -->
+  <section id="mitos" class="card mb-4 p-4 animate__animated animate__fadeIn">
+    <h2 class="mb-3">Mitos x Fatos</h2>
+    <p><strong>Mito:</strong> “Pílula do dia seguinte é anticoncepcional regular.”<br>
+       <strong>Fato:</strong> Ela é de emergência e não substitui outros métodos.</p>
+    <p><strong>Mito:</strong> “Não dá para engravidar na primeira vez.”<br>
+       <strong>Fato:</strong> Dá sim, sempre que houver relação sem proteção.</p>
+  </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="card">
-      <h2>Perguntas Frequentes</h2>
-      <details>
-        <summary>Posso engravidar na primeira vez?</summary>
-        <p>Sim, sempre que houver relação sem proteção, existe risco.</p>
-      </details>
-      <details>
-        <summary>O que fazer em caso de violência?</summary>
-        <p>Ligue 180 (Central de Atendimento à Mulher) ou procure ajuda médica imediata.</p>
-      </details>
-    </section>
+  <!-- FAQ -->
+  <section id="faq" class="card mb-4 p-4 animate__animated animate__fadeIn">
+    <h2 class="mb-3">Perguntas Frequentes</h2>
+    <details class="mb-2"><summary>Posso engravidar na primeira vez?</summary>
+      <p>Sim, sempre que houver relação sem proteção, existe risco.</p>
+    </details>
+    <details class="mb-2"><summary>O que fazer em caso de violência?</summary>
+      <p>Ligue 180 ou procure ajuda médica imediata.</p>
+    </details>
+  </section>
 
-    <!-- Ajuda -->
-    <section id="ajuda" class="card">
-      <h2>Precisa de ajuda?</h2>
-      <p>📞 Emergência: <strong>190</strong></p>
-      <p>📞 SAMU: <strong>192</strong></p>
-      <p>📞 Violência contra mulher: <strong>180</strong></p>
-      <p>📞 Crianças e adolescentes: <strong>188</strong></p>
-    </section>
-  </main>
+  <!-- Ajuda -->
+  <section id="ajuda" class="card mb-4 p-4 animate__animated animate__fadeIn">
+    <h2 class="mb-3">Precisa de ajuda?</h2>
+    <p>📞 Emergência: <strong>190</strong></p>
+    <p>📞 SAMU: <strong>192</strong></p>
+    <p>📞 Violência contra mulher: <strong>180</strong></p>
+    <p>📞 Crianças e adolescentes: <strong>188</strong></p>
+  </section>
+</main>
 
-  <footer>
-    <p>© 2025 Educação Sexual Interativa</p>
-  </footer>
+<footer class="text-center py-3 bg-light">
+  <p>© 2025 Educação Sexual Interativa</p>
+</footer>
 
-  <script src="script.js"></script>
+<!-- JS local -->
+<script src="script.js"></script>
+
 </body>
 </html>
