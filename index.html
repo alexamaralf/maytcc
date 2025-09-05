@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Educação Sexual Interativa — Guia Completo + Quiz</title>
-  <meta name="description" content="Guia completo, acessível e atualizado de educação sexual com explicações claras sobre consentimento, prevenção, ISTs, relações saudáveis e um quiz interativo." />
+  <meta name="description" content="Guia completo, acessível e atualizado de educação sexual com explicações claras sobre sexualidade na adolescência, consentimento, prevenção, ISTs, relações saudáveis e um quiz interativo." />
   <meta name="theme-color" content="#4a90e2" />
   <meta property="og:title" content="Educação Sexual Interativa — Guia + Quiz" />
   <meta property="og:description" content="Aprenda de forma segura e sem tabus. Leia o guia completo e teste seus conhecimentos no quiz interativo." />
@@ -15,15 +15,16 @@
   <style>
     /* --- Reset & base --- */
     :root{
-      --bg:#f4f7f9;--fg:#222;--muted:#6b7280;--card:#fff;--primary:#4a90e2;--secondary:#50e3c2;--ok:#28a745;--warn:#ffc107;--bad:#dc3545;--border:#e5e7eb;
+      --bg:#f4f7f9;--fg:#222;--muted:#6b7280;--card:#fff;--primary:#4a90e2;--secondary:#50e3c2;--ok:#28a745;--warn:#ffc107;--bad:#dc3545;--border:#e5e7eb;--shadow:0 10px 30px rgba(0,0,0,.06);
     }
     :root.dark{
-      --bg:#0b1220;--fg:#e5e7eb;--muted:#9aa3b2;--card:#0f172a;--primary:#60a5fa;--secondary:#34d399;--ok:#22c55e;--warn:#f59e0b;--bad:#ef4444;--border:#1f2937;
+      --bg:#0b1220;--fg:#e5e7eb;--muted:#9aa3b2;--card:#0f172a;--primary:#60a5fa;--secondary:#34d399;--ok:#22c55e;--warn:#f59e0b;--bad:#ef4444;--border:#1f2937;--shadow:0 18px 45px rgba(0,0,0,.35);
     }
     html{scroll-behavior:smooth}
     *{box-sizing:border-box}
     body{margin:0;font-family:'Poppins','Segoe UI',system-ui,Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
     a{color:var(--primary)}
+    img{max-width:100%;height:auto;border-radius:12px}
     .container{max-width:1000px;margin:0 auto;padding:0 1.25rem}
 
     /* Skip link */
@@ -31,7 +32,7 @@
     .skip-link:focus{position:static;width:auto;height:auto;padding:.5rem 1rem;background:var(--primary);color:#fff;border-radius:.5rem}
 
     /* Header */
-    header{background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;padding:2.75rem 0 1.5rem;border-bottom-left-radius:18px;border-bottom-right-radius:18px}
+    header{background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;padding:2.75rem 0 1.5rem;border-bottom-left-radius:18px;border-bottom-right-radius:18px;position:relative}
     .brand{display:flex;align-items:center;gap:.75rem}
     .brand svg{flex:0 0 auto}
     header h1{margin:.25rem 0 0;font-size:clamp(1.6rem,4vw,2.4rem)}
@@ -47,11 +48,15 @@
     .grid{display:grid;gap:1.25rem}
     @media (min-width:900px){.grid{grid-template-columns:2fr 1fr;align-items:start}}
 
-    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;box-shadow:var(--shadow)}
     .card h2{margin-top:0;color:var(--primary);font-size:clamp(1.2rem,2.5vw,1.6rem);border-bottom:2px solid var(--border);padding-bottom:.5rem;margin-bottom:1rem}
     .intro{background:var(--card);text-align:center}
     .intro h2{color:var(--fg);border:0;font-size:clamp(1.4rem,3vw,2rem)}
     .muted{color:var(--muted)}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.75rem;margin-top:0.75rem}
+    .gallery figure{margin:0}
+    .gallery figcaption{font-size:.9rem;color:var(--muted);margin-top:.25rem}
 
     .methods{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
     .method{background:linear-gradient(0deg,transparent 0,transparent 78%,rgba(80,227,194,.15) 78%);border:1px solid var(--border);border-left:4px solid var(--secondary);border-radius:10px;padding:1rem}
@@ -75,6 +80,11 @@
     .help{background:rgba(255,193,7,.08);border-left:6px solid var(--warn)}
     .help h2{color:#b7791f}
 
+    /* Adolescência */
+    .timeline{display:grid;grid-template-columns:1fr;gap:0.75rem}
+    .timeline .item{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:start;border:1px solid var(--border);border-left:5px solid var(--primary);padding:0.9rem;border-radius:10px;background:linear-gradient(0deg,transparent 0,transparent 70%,rgba(96,165,250,.08) 70%)}
+    .timeline .icon{font-size:1.4rem;line-height:1}
+
     /* Quiz */
     #quiz{scroll-margin-top:90px}
     .question{margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
@@ -88,12 +98,18 @@
     .actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
     .btn{border:1px solid var(--border);background:var(--primary);color:#fff;border-radius:10px;padding:.7rem 1rem;cursor:pointer}
     .btn.secondary{background:transparent;color:var(--primary)}
+    .btn.ghost{background:transparent;color:var(--fg)}
 
     .progress-wrap{display:flex;align-items:center;justify-content:space-between;margin-top:.75rem}
     .progress{height:10px;background:rgba(74,144,226,.25);border-radius:999px;overflow:hidden}
     .progress>span{display:block;height:100%;width:0;background:var(--primary)}
 
     footer{color:var(--muted);text-align:center;padding:2rem 1rem}
+
+    /* Utilitários */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .float-tools{position:fixed;right:1rem;bottom:1rem;display:flex;flex-direction:column;gap:.5rem;z-index:50}
+    .float-tools button{border:1px solid var(--border);background:var(--card);color:var(--fg);border-radius:999px;padding:.6rem .9rem;box-shadow:var(--shadow);cursor:pointer}
 
     /* Motion prefs */
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
@@ -104,7 +120,8 @@
     "@type": "FAQPage",
     "mainEntity": [
       {"@type":"Question","name":"Qual a diferença entre IST e DST?","acceptedAnswer":{"@type":"Answer","text":"IST é o termo atual porque muitas infecções podem não apresentar sintomas, mas ainda assim serem transmissíveis. DST pressupõe doença, isto é, sintomas."}},
-      {"@type":"Question","name":"O que fazer em caso de violência ou abuso?","acceptedAnswer":{"@type":"Answer","text":"Procure um local seguro, conte para alguém de confiança e busque ajuda profissional. Ligue 180 (Central de Atendimento à Mulher) ou 190 em emergências."}}
+      {"@type":"Question","name":"O que fazer em caso de violência ou abuso?","acceptedAnswer":{"@type":"Answer","text":"Procure um local seguro, conte para alguém de confiança e busque ajuda profissional. Ligue 180 (Central de Atendimento à Mulher) ou 190 em emergências."}},
+      {"@type":"Question","name":"Adolescente pode usar métodos contraceptivos?","acceptedAnswer":{"@type":"Answer","text":"Sim. A escolha deve considerar saúde, preferências e orientação de um serviço de saúde. Preservativos são essenciais também para reduzir o risco de ISTs."}}
     ]
   }
   </script>
@@ -123,6 +140,7 @@
         </div>
         <nav class="nav" aria-label="Navegação principal">
           <a href="#consentimento">Consentimento</a>
+          <a href="#adolescencia">Adolescência</a>
           <a href="#contracepcao">Contracepção</a>
           <a href="#ists">ISTs</a>
           <a href="#relacionamentos">Relações</a>
@@ -138,14 +156,29 @@
       <!-- Coluna principal -->
       <section class="card intro" aria-labelledby="intro-title">
         <h2 id="intro-title">✨ Guia Essencial: Sexualidade com Informação e Respeito</h2>
-        <p>Educação sexual é sobre saúde, direitos, prevenção e comunicação. Nesta página você encontra um panorama abrangente — do consentimento aos métodos contraceptivos, das ISTs a sinais de relações saudáveis — e, ao final, um <strong>quiz interativo</strong> para testar o que aprendeu.</p>
+        <p>Educação sexual é sobre saúde, direitos, prevenção e comunicação. Nesta página você encontra um panorama abrangente — do consentimento à sexualidade na adolescência, dos métodos contraceptivos às ISTs e relações saudáveis — e, ao final, um <strong>quiz interativo</strong> para testar o que aprendeu.</p>
         <p class="muted">Conteúdo educativo e informativo. Em dúvidas sobre sua saúde, procure serviços e profissionais de saúde.</p>
+        <div class="gallery" aria-label="Galeria ilustrativa">
+          <figure>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop" alt="Grupo de jovens conversando em círculo"/>
+            <figcaption>Conversas abertas e respeitosas fazem diferença.</figcaption>
+          </figure>
+          <figure>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1200&auto=format&fit=crop" alt="Caderno e materiais de estudo sobre saúde"/>
+            <figcaption>Informação de qualidade ajuda a decidir com segurança.</figcaption>
+          </figure>
+          <figure>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1520975916090-30b0e97f4250?q=80&w=1200&auto=format&fit=crop" alt="Mãos formando um coração"/>
+            <figcaption>Respeito, cuidado e consentimento.</figcaption>
+          </figure>
+        </div>
       </section>
 
       <aside class="card" aria-label="Sumário">
         <h2>🔎 O que você vai ver</h2>
         <ul>
           <li><a href="#consentimento">O que é consentimento e como praticá-lo</a></li>
+          <li><a href="#adolescencia">Sexualidade na adolescência</a></li>
           <li><a href="#contracepcao">Tipos de métodos contraceptivos</a></li>
           <li><a href="#ists">Prevenção e testes de ISTs</a></li>
           <li><a href="#relacionamentos">Sinais de relações saudáveis</a></li>
@@ -154,6 +187,10 @@
           <li><a href="#ajuda">Canais de ajuda</a></li>
           <li><a href="#quiz"><strong>Ir direto ao quiz</strong></a></li>
         </ul>
+        <div class="actions" style="margin-top:1rem">
+          <button id="printBtn" class="btn secondary" type="button" aria-label="Imprimir ou salvar em PDF">🖨️ Imprimir/PDF</button>
+          <button id="toggleImagesBtn" class="btn ghost" type="button" aria-pressed="false" aria-label="Alternar exibição de imagens">🖼️ Mostrar/Ocultar imagens</button>
+        </div>
       </aside>
 
       <section id="consentimento" class="card" aria-labelledby="cons-title">
@@ -177,6 +214,80 @@
             </ul>
           </div>
         </div>
+        <details style="margin-top:1rem"><summary>Dicas rápidas para conversar sobre limites</summary>
+          <ul>
+            <li>Use perguntas abertas: "Como você se sente sobre…?"</li>
+            <li>Combine palavras de segurança e sinais para pausar.</li>
+            <li>Respeite qualquer mudança de ideia imediatamente.</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- NOVA SEÇÃO: Sexualidade na Adolescência -->
+      <section id="adolescencia" class="card" aria-labelledby="adol-title">
+        <h2 id="adol-title">🌱 Sexualidade na Adolescência: Informação & Conscientização</h2>
+        <p>A adolescência é um período de <strong>mudanças físicas, emocionais e sociais</strong>. Ter informação confiável ajuda a tomar decisões responsáveis e seguras. Abaixo, um panorama do que costuma acontecer — lembrando que cada corpo tem seu <em>próprio ritmo</em>.</p>
+        <div class="timeline" role="list">
+          <div class="item" role="listitem">
+            <div class="icon" aria-hidden="true">📈</div>
+            <div>
+              <strong>Puberdade</strong>
+              <p class="muted">Aparecimento de pelos, mudanças na voz, crescimento dos seios, primeira menstruação, ejaculação. Varia muito de pessoa para pessoa.</p>
+            </div>
+          </div>
+          <div class="item" role="listitem">
+            <div class="icon" aria-hidden="true">🧠</div>
+            <div>
+              <strong>Autoconhecimento</strong>
+              <p class="muted">Entender seu corpo, emoções e limites. Comparar-se menos com outras pessoas ajuda a reduzir ansiedade.</p>
+            </div>
+          </div>
+          <div class="item" role="listitem">
+            <div class="icon" aria-hidden="true">🤝</div>
+            <div>
+              <strong>Consentimento e respeito</strong>
+              <p class="muted">Qualquer contato íntimo deve partir do <em>sim</em> claro e entusiasmado de todos. Pressão de pares não é convite — é um sinal de alerta.</p>
+            </div>
+          </div>
+          <div class="item" role="listitem">
+            <div class="icon" aria-hidden="true">🛡️</div>
+            <div>
+              <strong>Prevenção</strong>
+              <p class="muted">Aprender sobre preservativos, métodos contraceptivos, vacinação (HPV, hepatite B) e testagem de ISTs.</p>
+            </div>
+          </div>
+          <div class="item" role="listitem">
+            <div class="icon" aria-hidden="true">📱</div>
+            <div>
+              <strong>Segurança digital</strong>
+              <p class="muted">Sexting tem riscos. Evite mostrar rosto/tatuagens, use senhas fortes e pense no impacto do compartilhamento.</p>
+            </div>
+          </div>
+        </div>
+        <div class="two-col" style="margin-top:1rem">
+          <div>
+            <h4>Checklist de bem‑estar</h4>
+            <ul>
+              <li>Durma e se alimente bem.</li>
+              <li>Converse com adultos de confiança.</li>
+              <li>Respeite seus limites e os dos outros.</li>
+              <li>Procure serviços de saúde quando tiver dúvidas.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Mini Quiz: Adolescência</h4>
+            <form id="miniQuiz">
+              <label class="option"><input type="radio" name="q1" value="correta"> Consentimento pode ser retirado a qualquer momento.</label>
+              <label class="option"><input type="radio" name="q1" value="incorreta"> Se disse sim uma vez, vale para sempre.</label>
+              <div class="actions"><button type="button" class="btn secondary" id="miniQuizBtn">Ver resposta</button></div>
+              <p id="miniQuizFb" class="muted" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+        <figure style="margin-top:1rem">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1520975619017-5d91f9f3c0b1?q=80&w=1200&auto=format&fit=crop" alt="Jovens caminhando no pátio da escola"/>
+          <figcaption class="muted">Cada corpo e cada história têm seu tempo. Informação é proteção.</figcaption>
+        </figure>
       </section>
 
       <section id="contracepcao" class="card" aria-labelledby="contr-title">
@@ -210,6 +321,17 @@
             <tr><td>Coito interrompido/tabelinha</td><td>Baixa</td><td>Elevada chance de falha.</td></tr>
           </tbody>
         </table>
+        <details style="margin-top:1rem"><summary>Guia rápido: como usar camisinha</summary>
+          <ol>
+            <li>Verifique a validade e a integridade da embalagem.</li>
+            <li>Abra com cuidado (sem dentes/tesoura) e desenrole com o pênis ereto, apertando a ponta para tirar o ar.</li>
+            <li>Após ejacular, segure a base ao retirar para evitar vazamentos e descarte no lixo.</li>
+          </ol>
+        </details>
+        <figure style="margin-top:1rem">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1200&auto=format&fit=crop" alt="Caixa com preservativos"/>
+          <figcaption class="muted">Preservativos protegem contra gravidez indesejada e muitas ISTs.</figcaption>
+        </figure>
       </section>
 
       <section id="ists" class="card" aria-labelledby="ists-title">
@@ -223,6 +345,28 @@
         <details style="margin-top:1rem"><summary>Sobre HIV, PrEP e PEP</summary>
           <p>PrEP é uma estratégia de prevenção para pessoas com risco aumentado de exposição ao HIV; PEP é uma medida de emergência até 72 horas após exposição de risco. Procure orientação de saúde para indicação adequada.</p>
         </details>
+        <div class="two-col" style="margin-top:1rem">
+          <div>
+            <h4>Sintomas comuns (podem variar)</h4>
+            <ul>
+              <li>Corrimento incomum, dor ao urinar, feridas ou verrugas genitais.</li>
+              <li>Coceira, dor pélvica, atraso menstrual após relação de risco.</li>
+              <li>Muitas ISTs podem não ter sintomas — a testagem é essencial.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Quando procurar atendimento</h4>
+            <ul>
+              <li>Após relação sem proteção ou ruptura da camisinha.</li>
+              <li>Se houve violência sexual (veja canais de ajuda abaixo).</li>
+              <li>Se apresentar sintomas ou tiver dúvidas.</li>
+            </ul>
+          </div>
+        </div>
+        <figure style="margin-top:1rem">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" alt="Profissional de saúde segurando exame"/>
+          <figcaption class="muted">Testar regularmente é um cuidado consigo e com os outros.</figcaption>
+        </figure>
       </section>
 
       <section id="relacionamentos" class="card" aria-labelledby="rel-title">
@@ -249,6 +393,10 @@
         <details style="margin-top:1rem"><summary>Segurança digital e sexting</summary>
           <p>Compartilhe imagens apenas com consentimento explícito e sabendo dos riscos. Evite mostrar rosto/tatuagens, ative bloqueios de tela e use senhas fortes.</p>
         </details>
+        <figure style="margin-top:1rem">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1520975432473-5bc03a06341b?q=80&w=1200&auto=format&fit=crop" alt="Duas pessoas caminhando lado a lado em um parque"/>
+          <figcaption class="muted">Cuidado e respeito são escolhas de todos os dias.</figcaption>
+        </figure>
       </section>
 
       <section id="mitos" class="card" aria-labelledby="myths-title">
@@ -280,9 +428,12 @@
           <li>♀️ Violência contra a Mulher: <strong>180</strong></li>
           <li>💬 Prevenção ao Suicídio (CVV): <strong>188</strong></li>
         </ul>
+        <div class="actions">
+          <button id="copyHelp" class="btn secondary" type="button">Copiar números úteis</button>
+        </div>
       </section>
 
-      <!-- QUIZ -->
+      <!-- QUIZ ORIGINAL -->
       <section id="quiz" class="card" aria-labelledby="quiz-title">
         <h2 id="quiz-title">🧠 Teste Seus Conhecimentos</h2>
         <p>Responda e clique em <em>Verificar respostas</em>. Você verá o que acertou, explicações e seu progresso. Os resultados mais recentes ficam salvos no seu navegador.</p>
@@ -304,6 +455,10 @@
     <p>© 2025 Educação Sexual Interativa. Informação é prevenção.</p>
   </footer>
 
+  <div class="float-tools" aria-label="Ferramentas flutuantes">
+    <button id="toTop" title="Voltar ao topo" aria-label="Voltar ao topo">⬆️</button>
+  </div>
+
   <script>
   (function(){
     // Tema (dark/light)
@@ -319,7 +474,35 @@
       localStorage.setItem('theme', dark?'dark':'light');
     });
 
-    // Quiz
+    // Botões auxiliares
+    document.getElementById('printBtn')?.addEventListener('click',()=>window.print());
+
+    const toggleImagesBtn = document.getElementById('toggleImagesBtn');
+    let imagesHidden = false;
+    toggleImagesBtn?.addEventListener('click',()=>{
+      imagesHidden = !imagesHidden;
+      document.querySelectorAll('img').forEach(img=>{ img.style.filter = imagesHidden? 'blur(10px) grayscale(30%)' : 'none'; img.style.transition='filter .2s'; });
+      toggleImagesBtn.setAttribute('aria-pressed', String(imagesHidden));
+    });
+
+    document.getElementById('copyHelp')?.addEventListener('click',async ()=>{
+      const text = 'Emergências: 190\nSAMU: 192\nViolência contra a Mulher: 180\nCVV: 188';
+      try{ await navigator.clipboard.writeText(text); alert('Canais de ajuda copiados!'); } catch(e){ alert('Não foi possível copiar.'); }
+    });
+
+    document.getElementById('toTop')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    // MINI QUIZ
+    const miniBtn = document.getElementById('miniQuizBtn');
+    miniBtn?.addEventListener('click',()=>{
+      const checked = document.querySelector('#miniQuiz input[type="radio"]:checked');
+      const fb = document.getElementById('miniQuizFb');
+      if(!checked){ fb.textContent = 'Escolha uma opção.'; return; }
+      if(checked.value==='correta'){ fb.textContent = 'Correto! O consentimento é contínuo e pode ser retirado a qualquer momento.'; }
+      else{ fb.textContent = 'Não é bem assim. O consentimento não é permanente; pode ser retirado a qualquer momento.'; }
+    });
+
+    // QUIZ ORIGINAL
     const elForm = document.getElementById('quizForm');
     const elSubmit = document.getElementById('submitBtn');
     const elRetry = document.getElementById('retryBtn');
@@ -375,9 +558,8 @@
         const labels = fs.querySelectorAll('label');
         labels.forEach(l=>l.classList.remove('correct','incorrect'));
         if(!checked){ return; }
-        const question = quizData.find(x=>fs.querySelector('legend').textContent.includes(x.q.slice(0,8))) || null;
-        const text = fs.querySelector('legend').textContent.replace(/^\d+\.\s/,'');
-        const item = quizData.find(x=>x.q===text) || question; // fallback
+        const text = fs.querySelector('legend').textContent.replace(/^\d+\.\s/, '');
+        const item = quizData.find(x=>x.q===text) || quizData[i];
         if(checked.value === item.a){
           score++; checked.parentElement.classList.add('correct');
         } else {
