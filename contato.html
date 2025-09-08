@@ -3,78 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - Educação Sexual Interativa</title>
+  <title>Contato — Educação Sexual Interativa</title>
+  <meta name="description" content="Entre em contato com a equipe do projeto Educação Sexual Interativa." />
+  <meta name="theme-color" content="#4a90e2" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%234a90e2'/%3E%3Ccircle cx='12' cy='12' r='6' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    body { background: #f4f7f9; }
-    .contato-container {
-      max-width: 500px;
-      margin: 3rem auto 2rem auto;
+    .topnav-btn {
+      padding: .7rem 1.5rem;
+      border-radius: 1.5rem;
+      font-size: 1.08rem;
+      font-weight: 700;
+      background: rgba(255,255,255,0.13);
+      color: #fff;
+      box-shadow: 0 2px 12px #4a90e233;
+      border: none;
+      outline: none;
+      transition: background .18s, color .18s, transform .18s, box-shadow .18s;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      margin-bottom: 0.2rem;
+    }
+    .topnav-btn:hover, .topnav-btn:focus {
       background: #fff;
-      border-radius: 14px;
+      color: #4a90e2;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 24px #4a90e244;
+      text-decoration: none;
+    }
+    @media (max-width: 700px) {
+      header h1 { font-size: 1.5rem !important; }
+      .topnav-btn { font-size: 1rem; padding: .6rem 1.1rem; }
+    }
+    .contato-card {
+      max-width: 540px;
+      margin: 2.5rem auto 2.5rem auto;
+      background: #fff;
+      border-radius: 1.2rem;
       box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
       text-align: center;
     }
-    .contato-container h1 {
+    .contato-card h2 {
       color: #4a90e2;
       margin-bottom: 0.5rem;
       font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
-    .contato-container p {
+    .contato-card p {
       color: #555;
       margin-bottom: 1.5rem;
+      font-size: 1.08rem;
     }
     .iframe-wrap {
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 2px 10px rgba(74,144,226,0.10);
-      margin-bottom: 1rem;
-    }
-    .btn-voltar {
-      display: inline-block;
-      margin-top: 1.2rem;
-      padding: 0.7rem 1.5rem;
-      background: #4a90e2;
-      color: #fff;
-      border-radius: 10px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 2px 8px rgba(74,144,226,0.10);
-      transition: background 0.2s;
-    }
-    .btn-voltar:hover, .btn-voltar:active, .btn-voltar:focus {
-      background: #357abd;
-      color: #fff;
+      margin-bottom: 1.2rem;
     }
   </style>
 </head>
 <body>
-  <div class="contato-container">
-    <h1>AINDA TEM DÚVIDAS REFERENTE O TEMA?</h1>
-    <p>Por favor, preencha seus dados e envie sua dúvida, você pode anexar uma foto, se desejar. Todas as informações aqui anexadas são estritamente confidenciais e suas tratativas são conduzidas de forma totalmente sigilosa
-</p>
-    <div class="iframe-wrap">
-      <!-- Substitua a URL abaixo pelo link do seu formulário externo -->
-      
-    <iframe
-      id="JotFormIFrame-252485558200053"
-      title="Ainda tem dúvidas referente o tema? "
-      onload="window.parent.scrollTo(0,0)"
-      allowtransparency="true"
-      allow="geolocation; microphone; camera; fullscreen; payment"
-      src="https://form.jotform.com/252485558200053"
-      frameborder="0"
-      style="min-width:100%;max-width:100%;height:539px;border:none;"
-      scrolling="no"
-    >
-    </iframe>
-    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252485558200053']", "https://form.jotform.com/")</script>
-    
-</form><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.isNewSACL=true;</script>
+  <header style="background:linear-gradient(100deg,#4a90e2 60%,#50e3c2 100%);padding:3.2rem 0 2.2rem 0;border-bottom-left-radius:2.2rem;border-bottom-right-radius:2.2rem;box-shadow:0 6px 32px #4a90e233;">
+    <div class="container" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+      <div style="margin-bottom:1.2rem;">
+        <img src="img/logo.png" alt="Logo Educação Sexual Interativa" width="100" height="100" style="filter:drop-shadow(0 2px 12px #4a90e2aa);border-radius:0%;object-fit:cover;"/>
+      </div>
+      <h1 style="font-size:2.7rem;font-weight:900;letter-spacing:2px;margin:0 0 0.5rem 0;line-height:1.1;text-transform:uppercase;color:#fff;text-shadow:0 4px 24px #222a,0 1px 0 #357abd;">CONTATO</h1>
+      <p class="muted" style="font-size:1.22rem;font-weight:500;margin:0 0 1.7rem 0;letter-spacing:0.5px;color:#fff;text-shadow:0 2px 8px #222a,0 1px 0 #357abd;">Fale conosco de forma sigilosa e segura.</p>
+      <nav class="nav" aria-label="Navegação principal" style="display:flex;flex-wrap:wrap;gap:1.1rem;justify-content:center;margin-bottom:1.2rem;">
+        <a href="index.html" class="nav-link topnav-btn">Início</a>
+        <a href="idealizadores.html" class="nav-link topnav-btn">Idealizadores</a>
+        <a href="#contato" class="nav-link topnav-btn" style="background:#fff;color:#4a90e2;font-weight:700;box-shadow:0 2px 12px #4a90e233;">Contato</a>
+      </nav>
     </div>
-    <a href="index.html" class="btn-voltar">← Voltar para o site</a>
-  </div>
+  </header>
+  <main id="conteudo">
+    <div class="contato-card">
+      <h2>AINDA TEM DÚVIDAS REFERENTE O TEMA?</h2>
+      <p>Por favor, preencha seus dados e envie sua dúvida. Você pode anexar uma foto, se desejar. Todas as informações aqui anexadas são estritamente confidenciais e suas tratativas são conduzidas de forma totalmente sigilosa.</p>
+      <div class="iframe-wrap">
+        <iframe
+          id="JotFormIFrame-252485558200053"
+          title="Ainda tem dúvidas referente o tema? "
+          onload="window.parent.scrollTo(0,0)"
+          allowtransparency="true"
+          allow="geolocation; microphone; camera; fullscreen; payment"
+          src="https://form.jotform.com/252485558200053"
+          frameborder="0"
+          style="min-width:100%;max-width:100%;height:539px;border:none;"
+          scrolling="no"
+        ></iframe>
+        <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+        <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252485558200053']", "https://form.jotform.com/")</script>
+      </div>
+      <a href="index.html" class="topnav-btn" style="background:#4a90e2;color:#fff;font-weight:700;box-shadow:0 2px 12px #4a90e233;margin-top:1.2rem;">← Voltar para o site</a>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Educação Sexual Interativa. Informação é prevenção.</p>
+  </footer>
 </body>
 </html>
