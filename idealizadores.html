@@ -1,3 +1,7 @@
+  <style>
+    .float-tools{position:fixed;right:1rem;left:auto;bottom:1rem;display:flex;flex-direction:column;gap:.5rem;z-index:50}
+    .float-tools button{border:1px solid #e5e7eb;background:#fff;color:#4a90e2;border-radius:999px;padding:.6rem .9rem;box-shadow:0 10px 30px rgba(0,0,0,.06);cursor:pointer}
+  </style>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -63,12 +67,10 @@
         <p>Este projeto foi desenvolvido por estudantes dedicados, com o objetivo de promover educação sexual acessível, clara e sem tabus para todos.</p>
         <div class="gallery" aria-label="Idealizadores" style="margin-top:2rem;">
           <figure style="text-align:center;">
-            <img src="img/mayara.jpg" alt="Mayara Silva" style="max-width:180px;width:100%;border-radius:50%;margin-bottom:0.7rem;box-shadow:0 2px 12px #4a90e244;"/>
-            <figcaption><strong>👩‍🎓 Mayara Silva</strong><br>Estudante de Técnico em ...<br><span class="muted">Responsável pelo conteúdo e pesquisa.</span></figcaption>
+            <figcaption><strong>👩‍🎓 Mayara Silva</strong><br>Estudante de Técnico em ...<br><span class="muted">Responsável por ....</span></figcaption>
           </figure>
           <figure style="text-align:center;">
-            <img src="img/alex.jpg" alt="Alex Amaral" style="max-width:180px;width:100%;border-radius:50%;margin-bottom:0.7rem;box-shadow:0 2px 12px #4a90e244;"/>
-            <figcaption><strong>👨‍🎓 Alex Amaral</strong><br>Estudante de Técnico em ...<br><span class="muted">Responsável pelo design e desenvolvimento.</span></figcaption>
+            <figcaption><strong>👨‍🎓 Alex Amaral</strong><br>Web Design<br><span class="muted">Responsável pelo desenvolvimento, deign e pesquisa.</span></figcaption>
           </figure>
         </div>
       </section>
@@ -81,10 +83,19 @@
           <li>Design responsivo e acessível.</li>
         </ul>
       </section>
+
     </div>
   </main>
   <footer>
     <p>© 2025 Educação Sexual Interativa. Informação é prevenção.</p>
   </footer>
+
+  <div class="float-tools" aria-label="Ferramentas flutuantes">
+    <button id="toTop" title="Voltar ao topo" aria-label="Voltar ao topo">⬆️</button>
+  </div>
+
+  <script>
+    document.getElementById('toTop')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  </script>
 </body>
 </html>
