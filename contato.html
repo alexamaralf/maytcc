@@ -1,10 +1,14 @@
+  <style>
+    .float-tools{position:fixed;right:1rem;left:auto;bottom:1rem;display:flex;flex-direction:column;gap:.5rem;z-index:50}
+    .float-tools button{border:1px solid #e5e7eb;background:#fff;color:#4a90e2;border-radius:999px;padding:.6rem .9rem;box-shadow:0 10px 30px rgba(0,0,0,.06);cursor:pointer}
+  </style>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato — Educação Sexual Interativa</title>
-  <meta name="description" content="Entre em contato com a equipe do projeto Educação Sexual Interativa." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Idealizadores — Educação Sexual Interativa</title>
+  <meta name="description" content="Conheça os idealizadores do projeto Educação Sexual Interativa." />
   <meta name="theme-color" content="#4a90e2" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%234a90e2'/%3E%3Ccircle cx='12' cy='12' r='6' fill='white'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,33 +43,6 @@
       header h1 { font-size: 1.5rem !important; }
       .topnav-btn { font-size: 1rem; padding: .6rem 1.1rem; }
     }
-    .contato-card {
-      max-width: 540px;
-      margin: 2.5rem auto 2.5rem auto;
-      background: #fff;
-      border-radius: 1.2rem;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
-      text-align: center;
-    }
-    .contato-card h2 {
-      color: #4a90e2;
-      margin-bottom: 0.5rem;
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-    .contato-card p {
-      color: #555;
-      margin-bottom: 1.5rem;
-      font-size: 1.08rem;
-    }
-    .iframe-wrap {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(74,144,226,0.10);
-      margin-bottom: 1.2rem;
-    }
   </style>
 </head>
 <body>
@@ -74,39 +51,51 @@
       <div style="margin-bottom:1.2rem;">
         <img src="img/logo.png" alt="Logo Educação Sexual Interativa" width="100" height="100" style="filter:drop-shadow(0 2px 12px #4a90e2aa);border-radius:0%;object-fit:cover;"/>
       </div>
-      <h1 style="font-size:2.7rem;font-weight:900;letter-spacing:2px;margin:0 0 0.5rem 0;line-height:1.1;text-transform:uppercase;color:#fff;text-shadow:0 4px 24px #222a,0 1px 0 #357abd;">CONTATO</h1>
-      <p class="muted" style="font-size:1.22rem;font-weight:500;margin:0 0 1.7rem 0;letter-spacing:0.5px;color:#fff;text-shadow:0 2px 8px #222a,0 1px 0 #357abd;">Fale conosco de forma sigilosa e segura.</p>
+      <h1 style="font-size:2.7rem;font-weight:900;letter-spacing:2px;margin:0 0 0.5rem 0;line-height:1.1;text-transform:uppercase;color:#fff;text-shadow:0 4px 24px #222a,0 1px 0 #357abd;">IDEALIZADORES</h1>
+      <p class="muted" style="font-size:1.22rem;font-weight:500;margin:0 0 1.7rem 0;letter-spacing:0.5px;color:#fff;text-shadow:0 2px 8px #222a,0 1px 0 #357abd;">Conheça quem está por trás do projeto.</p>
       <nav class="nav" aria-label="Navegação principal" style="display:flex;flex-wrap:wrap;gap:1.1rem;justify-content:center;margin-bottom:1.2rem;">
         <a href="index.html" class="nav-link topnav-btn">Início</a>
-        <a href="idealizadores.html" class="nav-link topnav-btn">Idealizadores</a>
-        <a href="#contato" class="nav-link topnav-btn" style="background:#fff;color:#4a90e2;font-weight:700;box-shadow:0 2px 12px #4a90e233;">Contato</a>
+        <a href="#idealizadores" class="nav-link topnav-btn" style="background:#fff;color:#4a90e2;font-weight:700;box-shadow:0 2px 12px #4a90e233;">Idealizadores</a>
+        <a href="contato.html" class="nav-link topnav-btn">Contato</a>
       </nav>
     </div>
   </header>
   <main id="conteudo">
-    <div class="contato-card">
-      <h2>AINDA TEM DÚVIDAS REFERENTE O TEMA?</h2>
-      <p>Por favor, preencha seus dados e envie sua dúvida. Você pode anexar uma foto, se desejar. Todas as informações aqui anexadas são estritamente confidenciais e suas tratativas são conduzidas de forma totalmente sigilosa.</p>
-      <div class="iframe-wrap">
-        <iframe
-          id="JotFormIFrame-252485558200053"
-          title="Ainda tem dúvidas referente o tema? "
-          onload="window.parent.scrollTo(0,0)"
-          allowtransparency="true"
-          allow="geolocation; microphone; camera; fullscreen; payment"
-          src="https://form.jotform.com/252485558200053"
-          frameborder="0"
-          style="min-width:100%;max-width:100%;height:539px;border:none;"
-          scrolling="no"
-        ></iframe>
-        <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-        <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252485558200053']", "https://form.jotform.com/")</script>
-      </div>
-      <a href="index.html" class="topnav-btn" style="background:#4a90e2;color:#fff;font-weight:700;box-shadow:0 2px 12px #4a90e233;margin-top:1.2rem;">← Voltar para o site</a>
+    <div class="container grid">
+      <section class="card intro" aria-labelledby="intro-title">
+        <h2 id="intro-title">👩‍🎓👨‍🎓 Sobre os Idealizadores</h2>
+        <p>Este projeto foi desenvolvido por estudantes dedicados, com o objetivo de promover educação sexual acessível, clara e sem tabus para todos.</p>
+        <div class="gallery" aria-label="Idealizadores" style="margin-top:2rem;">
+          <figure style="text-align:center;">
+            <figcaption><strong>👩‍🎓 Mayara Silva</strong><br>Estudante de Técnico em ...<br><span class="muted">Responsável pelo conteúdo e pesquisa.</span></figcaption>
+          </figure>
+          <figure style="text-align:center;">
+            <figcaption><strong>👨‍🎓 Alex Amaral</strong><br>Estudante de Técnico em ...<br><span class="muted">Responsável pelo design e desenvolvimento.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="card" aria-labelledby="sobre-projeto">
+        <h2 id="sobre-projeto">Sobre o Projeto</h2>
+        <p>O <strong>Educação Sexual Interativa</strong> nasceu como um Trabalho de Conclusão de Curso (TCC) para a Turma 10 do Curso Técnico. O objetivo é oferecer um guia confiável, interativo e acolhedor sobre sexualidade, prevenção, ISTs e relações saudáveis.</p>
+        <ul>
+          <li>Conteúdo baseado em fontes confiáveis e atualizadas.</li>
+          <li>Quiz interativo para fixação do aprendizado.</li>
+          <li>Design responsivo e acessível.</li>
+        </ul>
+      </section>
+
     </div>
   </main>
   <footer>
     <p>© 2025 Educação Sexual Interativa. Informação é prevenção.</p>
   </footer>
+
+  <div class="float-tools" aria-label="Ferramentas flutuantes">
+    <button id="toTop" title="Voltar ao topo" aria-label="Voltar ao topo">⬆️</button>
+  </div>
+
+  <script>
+    document.getElementById('toTop')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  </script>
 </body>
 </html>
