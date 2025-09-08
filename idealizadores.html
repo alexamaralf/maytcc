@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Idealizadores — Educação Sexual Interativa</title>
+  <meta name="description" content="Conheça os idealizadores do projeto Educação Sexual Interativa." />
+  <meta name="theme-color" content="#4a90e2" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%234a90e2'/%3E%3Ccircle cx='12' cy='12' r='6' fill='white'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .topnav-btn {
+      padding: .7rem 1.5rem;
+      border-radius: 1.5rem;
+      font-size: 1.08rem;
+      font-weight: 700;
+      background: rgba(255,255,255,0.13);
+      color: #fff;
+      box-shadow: 0 2px 12px #4a90e233;
+      border: none;
+      outline: none;
+      transition: background .18s, color .18s, transform .18s, box-shadow .18s;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      margin-bottom: 0.2rem;
+    }
+    .topnav-btn:hover, .topnav-btn:focus {
+      background: #fff;
+      color: #4a90e2;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 24px #4a90e244;
+      text-decoration: none;
+    }
+    @media (max-width: 700px) {
+      header h1 { font-size: 1.5rem !important; }
+      .topnav-btn { font-size: 1rem; padding: .6rem 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header style="background:linear-gradient(100deg,#4a90e2 60%,#50e3c2 100%);padding:3.2rem 0 2.2rem 0;border-bottom-left-radius:2.2rem;border-bottom-right-radius:2.2rem;box-shadow:0 6px 32px #4a90e233;">
+    <div class="container" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+      <div style="margin-bottom:1.2rem;">
+        <img src="img/logo.png" alt="Logo Educação Sexual Interativa" width="100" height="100" style="filter:drop-shadow(0 2px 12px #4a90e2aa);border-radius:0%;object-fit:cover;"/>
+      </div>
+      <h1 style="font-size:2.7rem;font-weight:900;letter-spacing:2px;margin:0 0 0.5rem 0;line-height:1.1;text-transform:uppercase;color:#fff;text-shadow:0 4px 24px #222a,0 1px 0 #357abd;">IDEALIZADORES</h1>
+      <p class="muted" style="font-size:1.22rem;font-weight:500;margin:0 0 1.7rem 0;letter-spacing:0.5px;color:#fff;text-shadow:0 2px 8px #222a,0 1px 0 #357abd;">Conheça quem está por trás do projeto.</p>
+      <nav class="nav" aria-label="Navegação principal" style="display:flex;flex-wrap:wrap;gap:1.1rem;justify-content:center;margin-bottom:1.2rem;">
+        <a href="index.html" class="nav-link topnav-btn">Início</a>
+        <a href="#idealizadores" class="nav-link topnav-btn" style="background:#fff;color:#4a90e2;font-weight:700;box-shadow:0 2px 12px #4a90e233;">Idealizadores</a>
+        <a href="contato.html" class="nav-link topnav-btn">Contato</a>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo">
+    <div class="container grid">
+      <section class="card intro" aria-labelledby="intro-title">
+        <h2 id="intro-title">👩‍🎓👨‍🎓 Sobre os Idealizadores</h2>
+        <p>Este projeto foi desenvolvido por estudantes dedicados, com o objetivo de promover educação sexual acessível, clara e sem tabus para todos.</p>
+        <div class="gallery" aria-label="Idealizadores" style="margin-top:2rem;">
+          <figure style="text-align:center;">
+            <img src="img/mayara.jpg" alt="Mayara Silva" style="max-width:180px;width:100%;border-radius:50%;margin-bottom:0.7rem;box-shadow:0 2px 12px #4a90e244;"/>
+            <figcaption><strong>👩‍🎓 Mayara Silva</strong><br>Estudante de Técnico em ...<br><span class="muted">Responsável pelo conteúdo e pesquisa.</span></figcaption>
+          </figure>
+          <figure style="text-align:center;">
+            <img src="img/alex.jpg" alt="Alex Amaral" style="max-width:180px;width:100%;border-radius:50%;margin-bottom:0.7rem;box-shadow:0 2px 12px #4a90e244;"/>
+            <figcaption><strong>👨‍🎓 Alex Amaral</strong><br>Estudante de Técnico em ...<br><span class="muted">Responsável pelo design e desenvolvimento.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="card" aria-labelledby="sobre-projeto">
+        <h2 id="sobre-projeto">Sobre o Projeto</h2>
+        <p>O <strong>Educação Sexual Interativa</strong> nasceu como um Trabalho de Conclusão de Curso (TCC) para a Turma 10 do Curso Técnico. O objetivo é oferecer um guia confiável, interativo e acolhedor sobre sexualidade, prevenção, ISTs e relações saudáveis.</p>
+        <ul>
+          <li>Conteúdo baseado em fontes confiáveis e atualizadas.</li>
+          <li>Quiz interativo para fixação do aprendizado.</li>
+          <li>Design responsivo e acessível.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Educação Sexual Interativa. Informação é prevenção.</p>
+  </footer>
+</body>
+</html>
