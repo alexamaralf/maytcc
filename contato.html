@@ -1,4 +1,13 @@
   <style>
+    .footer-author {
+      display: block;
+      text-align: right;
+      font-size: 0.75rem;
+      color: #888;
+      font-family: 'Poppins', Arial, sans-serif;
+      margin-top: 0.2rem;
+      margin-right: 1vw;
+    }
     .float-tools{position:fixed;right:1rem;left:auto;bottom:1rem;display:flex;flex-direction:column;gap:.5rem;z-index:50}
     .float-tools button{border:1px solid #e5e7eb;background:#fff;color:#4a90e2;border-radius:999px;padding:.6rem .9rem;box-shadow:0 10px 30px rgba(0,0,0,.06);cursor:pointer}
   </style>
@@ -121,4 +130,8 @@
     document.getElementById('toTop')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
   </script>
 </body>
+</main>
+<footer>
+  <span class="footer-author">Criado por: Alex Amaral</span>
+</footer>
 </html>
