@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="quiz.css">
   <style>
     .footer-author {
       display: block;
@@ -586,19 +587,27 @@
 
 
       <!-- QUIZ NA COLUNA PRINCIPAL -->
-      <section id="quiz" class="card" aria-labelledby="quiz-title">
+      <section id="quiz" class="card quiz-section" aria-labelledby="quiz-title">
         <h2 id="quiz-title">🧠 Teste Seus Conhecimentos</h2>
-        <p>Responda e clique em <em>Verificar respostas</em>. Você verá o que acertou, explicações e seu progresso. Os resultados mais recentes ficam salvos no seu navegador.</p>
-        <form id="quizForm" novalidate></form>
-        <div class="actions">
-            <button class="btn" id="submitBtn" type="button" aria-label="Verificar respostas do quiz">Verificar respostas</button>
-            <button class="btn secondary" id="retryBtn" type="button" aria-label="Refazer quiz">Refazer</button>
+        <p>Responda e clique em <em>Verificar respostas</em>. Você verá o que acertou, explicações e seu progresso.</p>
+        <form id="quizForm" class="quiz-form" novalidate></form>
+        <div class="quiz-controls">
+          <div class="actions">
+            <button class="btn primary-btn" id="submitBtn" type="button" aria-label="Verificar respostas do quiz">
+              <span>Verificar respostas</span>
+            </button>
+            <button class="btn secondary-btn" id="retryBtn" type="button" aria-label="Refazer quiz">
+              <span>Refazer</span>
+            </button>
+          </div>
+          <div class="progress-wrap" aria-live="polite">
+            <small id="progressText" class="muted">Progresso: 0 / 10</small>
+            <div class="progress">
+              <span id="progressBar" class="progress-bar"></span>
+            </div>
+          </div>
+          <p id="result" class="quiz-result muted" role="status" aria-live="polite"></p>
         </div>
-        <div class="progress-wrap" aria-live="polite">
-          <small id="progressText" class="muted">Progresso: 0 / 10</small>
-          <div class="progress" style="flex:1;margin-left:1rem" aria-hidden="true"><span id="progressBar"></span></div>
-        </div>
-        <p id="result" class="muted" role="status" aria-live="polite" style="margin-top:.8rem"></p>
       </section>
 
       <!-- FAQ NA COLUNA LATERAL DIREITA, ACIMA DO AJUDA -->
