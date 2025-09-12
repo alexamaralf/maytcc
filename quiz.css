@@ -1,0 +1,297 @@
+/* Quiz Styles */
+.quiz-section {
+  padding: 2rem;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.quiz-section h2 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.quiz-form {
+  margin-top: 2rem;
+}
+
+.question {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.question:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(74,144,226,0.12);
+}
+
+.question legend {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--fg);
+  margin-bottom: 1rem;
+}
+
+.option {
+  display: block;
+  margin: 0.8rem 0;
+}
+
+.option label {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-right: 3rem;
+}
+
+.option label:hover {
+  background: linear-gradient(45deg, rgba(74,144,226,0.05), rgba(80,227,194,0.05));
+  border-color: var(--primary);
+  transform: translateX(5px);
+}
+
+.option input[type="radio"] {
+  margin-right: 1rem;
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+.option input[type="radio"]:checked + label {
+  border-color: var(--primary);
+  background: linear-gradient(45deg, rgba(74,144,226,0.08), rgba(80,227,194,0.08));
+}
+
+.correct {
+  animation: correctAnswer 0.4s ease forwards;
+}
+
+.incorrect {
+  animation: incorrectAnswer 0.4s ease forwards;
+}
+
+.feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--bg);
+  animation: slideFeedback 0.3s ease forwards;
+}
+
+.quiz-controls {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--border);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.btn:active::after {
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+}
+
+#submitBtn {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(74,144,226,0.2);
+}
+
+#submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74,144,226,0.3);
+  background: linear-gradient(135deg, var(--primary) 20%, var(--secondary) 120%);
+}
+
+#retryBtn {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: 0 2px 8px rgba(74,144,226,0.1);
+}
+
+#retryBtn:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74,144,226,0.2);
+}
+
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.progress {
+  flex: 1;
+  height: 8px;
+  background: rgba(74,144,226,0.15);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+#result {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--bg);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideUp 0.4s ease forwards;
+}
+
+@keyframes correctAnswer {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  100% {
+    transform: translateX(0);
+    border-color: var(--ok);
+    background: linear-gradient(45deg, rgba(40,167,69,0.1), rgba(40,167,69,0.05));
+  }
+}
+
+@keyframes incorrectAnswer {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(5px); }
+  100% {
+    transform: translateX(0);
+    border-color: var(--bad);
+    background: linear-gradient(45deg, rgba(220,53,69,0.1), rgba(220,53,69,0.05));
+  }
+}
+
+@keyframes slideFeedback {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+/* Estilos de feedback */
+.option.correct label {
+  background: #e8f5e9;
+  border-color: #4CAF50;
+  color: #2E7D32;
+}
+
+.option.correct label::after {
+  content: '✓';
+  position: absolute;
+  right: 1rem;
+  color: #4CAF50;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.option.incorrect label {
+  background: #ffebee;
+  border-color: #f44336;
+  color: #c62828;
+  animation: shake 0.5s;
+}
+
+.option.incorrect label::after {
+  content: '✕';
+  position: absolute;
+  right: 1rem;
+  color: #f44336;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@media (max-width: 600px) {
+  .quiz-section {
+    padding: 1rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .progress-wrap {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
