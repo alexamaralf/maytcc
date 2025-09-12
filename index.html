@@ -192,6 +192,7 @@
         <a href="#numeros" class="nav-link topnav-btn">NÚMEROS</a>
         <a href="#video" class="nav-link topnav-btn">VÍDEO</a>
         <a href="idealizadores.html" class="nav-link topnav-btn">IDEALIZADORES</a>
+        <a href="#gravidez-adolescencia" class="nav-link topnav-btn">GRAVIDEZ NA ADOLESCÊNCIA</a>
         <a href="#quiz" class="nav-link topnav-btn" style="background:#fff;color:#4a90e2;font-weight:700;box-shadow:0 2px 12px #4a90e233;">QUIZ</a>
    
         <button class="toggle" id="themeToggle" aria-pressed="false" aria-label="Alternar tema claro/escuro" style="margin-left:0.5rem;"> Modo Escuro 🌙</button>
@@ -249,6 +250,44 @@
             <img loading="lazy" src="img/respeito.png" alt="Mãos formando um coração"/>
             <figcaption>Respeito, cuidado e consentimento.</figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section id="gravidez-adolescencia" class="card" aria-labelledby="gravidez-title">
+        <h2 id="gravidez-title">👶 Gravidez na Adolescência</h2>
+        <p>A gravidez na adolescência é um tema importante de saúde pública, pois pode trazer desafios físicos, emocionais e sociais para jovens e suas famílias. Conhecer os riscos, formas de prevenção e onde buscar apoio faz toda a diferença.</p>
+        <figure style="text-align:center;margin:1.2rem 0 1.7rem 0;">
+          <img src="img/gravidajovem.jpg" alt="Acolhimento e informação" style="max-width:220px;width:100%;border-radius:14px;box-shadow:0 2px 12px #4a90e222;" loading="lazy" />
+          <figcaption class="muted" style="margin-top:0.5rem;font-size:0.98rem;">Acolhimento e informação.</figcaption>
+        </figure>
+        <div class="two-col">
+          <div>
+            <h4>Principais riscos e desafios</h4>
+            <ul>
+              <li>Interrupção dos estudos e planos futuros</li>
+              <li>Maior risco de complicações na gestação e parto</li>
+              <li>Impactos emocionais e psicológicos</li>
+              <li>Desafios financeiros e sociais</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Como prevenir?</h4>
+            <ul>
+              <li>Informação e diálogo aberto sobre sexualidade</li>
+              <li>Uso correto de métodos contraceptivos</li>
+              <li>Acesso a serviços de saúde e orientação</li>
+              <li>Respeito ao próprio tempo e limites</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-help" style="margin-top:1.2rem;">
+          <h3 style="margin-top:0;">Onde buscar apoio?</h3>
+          <ul class="help-contacts">
+            <li>Converse com profissionais de saúde em UBS e postos de atendimento</li>
+            <li>Procure orientação em escolas e projetos sociais</li>
+            <li>Ligue para o Disque Saúde: <strong>136</strong></li>
+            <li><a href="https://buscasaude.prefeitura.sp.gov.br/" target="_blank" rel="noopener">Encontre uma UBS próxima</a></li>
+          </ul>
         </div>
       </section>
 
@@ -669,16 +708,18 @@
     const elProgressBar = document.getElementById('progressBar');
 
     const quizData = [
-      {q:"Usar camisinha ajuda a prevenir ISTs?", opts:["Sim","Não"], a:"Sim", tip:"Preservativos reduzem o risco de transmissão de muitas ISTs quando usados corretamente." , link:'#ists'},
-      {q:"Pílula do dia seguinte pode ser usada como anticoncepcional regular?", opts:["Sim","Não"], a:"Não", tip:"É um recurso de emergência e não substitui métodos de rotina.", link:'#contracepcao'},
-      {q:"Consentimento significa que as duas pessoas querem e concordam?", opts:["Sim","Não"], a:"Sim", tip:"Consentimento deve ser claro, entusiasmado e contínuo.", link:'#consentimento'},
-      {q:"O método da tabelinha é 100% seguro para prevenir gravidez?", opts:["Sim","Não"], a:"Não", tip:"Métodos comportamentais têm maior taxa de falha em uso típico.", link:'#contracepcao'},
-      {q:"Camisinha interna (feminina) é uma opção de prevenção de ISTs?", opts:["Sim","Não"], a:"Sim", tip:"É um método de barreira que também ajuda a reduzir risco de ISTs.", link:'#contracepcao'},
-      {q:"DST e IST são a mesma coisa?", opts:["Sim","Não"], a:"Não", tip:"IST é o termo atual; muitas infecções podem não ter sintomas.", link:'#faq'},
-      {q:"É possível engravidar usando preservativo de forma incorreta?", opts:["Sim","Não"], a:"Sim", tip:"Uso incorreto aumenta risco de falha; aprenda a usar corretamente.", link:'#contracepcao'},
-      {q:"É importante fazer exames periódicos mesmo sem sintomas de ISTs?", opts:["Sim","Não"], a:"Sim", tip:"Muitas ISTs são assintomáticas; testagem regular é recomendada.", link:'#ists'},
-      {q:"Pornografia é um bom guia para aprender sobre sexo seguro?", opts:["Sim","Não"], a:"Não", tip:"Não substitui informação baseada em saúde e segurança.", link:'#mitos'},
-      {q:"Comunicação aberta com o(a) parceiro(a) ajuda em relações saudáveis?", opts:["Sim","Não"], a:"Sim", tip:"Conversar sobre limites, proteção e sentimentos fortalece a relação.", link:'#relacionamentos'}
+  {q:"Usar camisinha ajuda a prevenir ISTs?", opts:["Sim","Não"], a:"Sim", tip:"Preservativos reduzem o risco de transmissão de muitas ISTs quando usados corretamente." , link:'#ists'},
+  {q:"Pílula do dia seguinte pode ser usada como anticoncepcional regular?", opts:["Sim","Não"], a:"Não", tip:"É um recurso de emergência e não substitui métodos de rotina.", link:'#contracepcao'},
+  {q:"O método da tabelinha é 100% seguro para prevenir gravidez?", opts:["Sim","Não"], a:"Não", tip:"Métodos comportamentais têm maior taxa de falha em uso típico.", link:'#contracepcao'},
+  {q:"Camisinha interna (feminina) é uma opção de prevenção de ISTs?", opts:["Sim","Não"], a:"Sim", tip:"É um método de barreira que também ajuda a reduzir risco de ISTs.", link:'#contracepcao'},
+  {q:"DST e IST são a mesma coisa?", opts:["Sim","Não"], a:"Não", tip:"IST é o termo atual; muitas infecções podem não ter sintomas.", link:'#faq'},
+  {q:"É possível engravidar usando preservativo de forma incorreta?", opts:["Sim","Não"], a:"Sim", tip:"Uso incorreto aumenta risco de falha; aprenda a usar corretamente.", link:'#contracepcao'},
+  {q:"É importante fazer exames periódicos mesmo sem sintomas de ISTs?", opts:["Sim","Não"], a:"Sim", tip:"Muitas ISTs são assintomáticas; testagem regular é recomendada.", link:'#ists'},
+  {q:"Pornografia é um bom guia para aprender sobre sexo seguro?", opts:["Sim","Não"], a:"Não", tip:"Não substitui informação baseada em saúde e segurança.", link:'#mitos'},
+  {q:"Comunicação aberta com o(a) parceiro(a) ajuda em relações saudáveis?", opts:["Sim","Não"], a:"Sim", tip:"Conversar sobre limites, proteção e sentimentos fortalece a relação.", link:'#relacionamentos'},
+  // Perguntas sobre Gravidez na Adolescência
+  {q:"A gravidez na adolescência pode impactar os estudos e planos futuros?", opts:["Sim","Não"], a:"Sim", tip:"A gravidez precoce pode levar à interrupção dos estudos e trazer desafios para o futuro.", link:'#gravidez-adolescencia'},
+  {q:"Qual destas é uma forma importante de prevenir a gravidez na adolescência?", opts:["Diálogo aberto e uso de métodos contraceptivos","Apenas confiar na sorte"], a:"Diálogo aberto e uso de métodos contraceptivos", tip:"Informação, diálogo e uso correto de métodos contraceptivos são essenciais para a prevenção.", link:'#gravidez-adolescencia'}
     ];
 
     function shuffle(arr){return [...arr].sort(()=>Math.random()-0.5)}
