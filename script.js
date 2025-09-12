@@ -22,7 +22,12 @@ function loadQuiz() {
     const div = document.createElement("div");
     div.classList.add("question");
     div.innerHTML = `<p>${index + 1}. ${q.question}</p>
-      ${q.options.map(opt => `<label><input type="radio" name="q${index}" value="${opt}"> ${opt}</label>`).join("")}`;
+      ${q.options.map(opt => `
+        <div class="option">
+          <input type="radio" id="q${index}_${opt}" name="q${index}" value="${opt}">
+          <label for="q${index}_${opt}">${opt}</label>
+        </div>
+      `).join("")}`;
     quizContainer.appendChild(div);
   });
   updateProgress();
@@ -41,23 +46,24 @@ submitBtn.addEventListener("click", () => {
 
   quizData.forEach((q, index) => {
     const selectedRadio = document.querySelector(`input[name="q${index}"]:checked`);
-    const labels = document.querySelectorAll(`input[name="q${index}"]`);
+    const options = document.querySelectorAll(`.option input[name="q${index}"]`);
 
-    labels.forEach(labelInput => {
-        labelInput.parentElement.classList.remove('correct', 'incorrect');
+    options.forEach(input => {
+      input.parentElement.classList.remove('correct', 'incorrect');
     });
 
     if (selectedRadio) {
+      const selectedOption = selectedRadio.parentElement;
       if (selectedRadio.value === q.answer) {
         score++;
-        selectedRadio.parentElement.classList.add("correct");
+        selectedOption.classList.add("correct");
       } else {
-        selectedRadio.parentElement.classList.add("incorrect");
+        selectedOption.classList.add("incorrect");
         // Mostra qual seria a resposta correta
-        labels.forEach(labelInput => {
-            if (labelInput.value === q.answer) {
-                labelInput.parentElement.classList.add("correct");
-            }
+        options.forEach(input => {
+          if (input.value === q.answer) {
+            input.parentElement.classList.add("correct");
+          }
         });
       }
     }
